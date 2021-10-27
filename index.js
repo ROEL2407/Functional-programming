@@ -36,19 +36,14 @@ function appendData(data) {
         console.log(data);
     }
 }
-const renameKeys = (keysMap, obj) =>
-    Object.keys(obj).reduce(
-    (acc, key) => ({
-        ...acc,
-        ...{ [keysMap[key] || key]: obj[key] }
-    }),
-    {}
-);
 
-renameKeys({Wat_is_je_favoriete_soort_huisdier?: "huisdier", age: "lifeExperience"}, json);
+const ujson = json;
+const arr = JSON.stringify( ujson );
+arr.forEach( obj => renameKey( obj, 'Wat is je favoriete soort huisdier?', 'huisdier' ) );
+
+console.log( updatedJson );
 
 
-// renameKeys(data, [{
 //     from: "Wat is je favoriete soort huisdier?",
 //     to: "huisdier"
 // },
