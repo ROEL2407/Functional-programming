@@ -4,10 +4,12 @@ fetch("./dataset_raw.json")
         return response.json();
     })
     .then(function (data) {
+        // Functions will be executed here
         renameKeys(data);
         dataToLowerCase(data);
         showAllData(data);
         showKeys(data);
+        dataCleaner(data);
     })
     .catch(function (err) {
         // If an error occured, it will be catched here
@@ -28,7 +30,7 @@ function renameKey(obj, oldKey, newKey) {
 }
 
 function renameKeys(data) {
-    // renames long keys to simple words
+    // Renames long keys to simple words
     data.forEach(obj => renameKey(obj, 'Wat is je favoriete windrichting?', 'windrichting'));
     data.forEach(obj => renameKey(obj, 'Wat is je favoriete soort huisdier?', 'huisdier'));
     data.forEach(obj => renameKey(obj, 'Wat is je oogkleur?', 'oogkleur'));
@@ -48,13 +50,12 @@ function renameKeys(data) {
 function dataToLowerCase(obj) {
     for (let i = 0; i < obj.length; i++) {
         Object.keys(obj[i]).forEach(key => {
-            if (typeof obj[i][key] == 'string') {
+            if (typeof obj[i][key] === 'string') {
                 let temp = obj[i][key].toLowerCase();
                 return temp;
             }
-        })
+        });
     }
-    console.table(temp);
 }
 
 function showKeys(data) {
@@ -63,3 +64,12 @@ function showKeys(data) {
     console.log("Keys: ", keys);
     return keys;
 }
+let cleanedData = [];
+
+function dataCleaner(data) {
+    for (let i = 0; i < data.length; i++) {
+        cleanedData.push({
+            /*data pushen van functie dataToLowerCase*/ });
+    }
+}
+console.table(cleanedData);
