@@ -15,7 +15,7 @@ fetch("./dataset_raw.json")
     });
 
 function showAllData(data) {
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         // Loops all items of json file to the console 
         //console.log(data);
     }
@@ -28,6 +28,7 @@ function renameKey(obj, oldKey, newKey) {
 }
 
 function renameKeys(data) {
+    // renames long keys to simple words
     data.forEach(obj => renameKey(obj, 'Wat is je favoriete windrichting?', 'windrichting'));
     data.forEach(obj => renameKey(obj, 'Wat is je favoriete soort huisdier?', 'huisdier'));
     data.forEach(obj => renameKey(obj, 'Wat is je oogkleur?', 'oogkleur'));
@@ -45,19 +46,19 @@ function renameKeys(data) {
 }
 
 function dataToLowerCase(obj) {
-    for (var i = 0; i < obj.length; i++) {
+    for (let i = 0; i < obj.length; i++) {
         Object.keys(obj[i]).forEach(key => {
-            console.log(obj[i][key]);
             if (typeof obj[i][key] == 'string') {
-                var temp = obj[i][key].toLowerCase();
-                console.log(temp);
+                let temp = obj[i][key].toLowerCase();
+                return temp;
             }
         })
     }
 }
+console.table(dataToLowerCase());
 
 function showKeys(data) {
-    // Show all keys(questions) of the dataset
+    // Show all keys of the dataset
     let keys = Object.keys(data[0]);
     console.log("Keys: ", keys);
     return keys;
