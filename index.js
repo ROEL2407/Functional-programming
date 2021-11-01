@@ -10,9 +10,13 @@ fetch("./dataset_raw.json")
         showAllData(data);
         showKeys(data);
         dataCleaner(data);
-    })
-    .then((data) => {
         const lowercase = dataToLowerCase(data);
+        
+        for (let i = 0; i < data.length; i++) {
+                cleanedData.push({
+                    clean: lowercase[i]
+                 });
+        }
     })
     .catch(function (err) {
         // If an error occured, it will be catched here
@@ -70,10 +74,5 @@ function showKeys(data) {
     return keys;
 }
 function dataCleaner(data) {
-    for (let i = 0; i < data.length; i++) {
-            cleanedData.push({
-                clean: lowercase[i]
-             });
-    }
 }
 console.table(cleanedData);
