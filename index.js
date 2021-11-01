@@ -11,10 +11,15 @@ fetch("./dataset_raw.json")
         showKeys(data);
         dataCleaner(data);
     })
+    .then((data) => {
+        const lowercase = dataToLowerCase(data);
+    })
     .catch(function (err) {
         // If an error occured, it will be catched here
         console.log(err);
     });
+
+let cleanedData = [];
 
 function showAllData(data) {
     for (let i = 0; i < data.length; i++) {
@@ -51,8 +56,8 @@ function dataToLowerCase(obj) {
     for (let i = 0; i < obj.length; i++) {
         Object.keys(obj[i]).forEach(key => {
             if (typeof obj[i][key] === 'string') {
-                let temp = obj[i][key].toLowerCase();
-                return temp;
+                let lower = obj[i][key].toLowerCase();
+                return lower;
             }
         });
     }
@@ -64,12 +69,11 @@ function showKeys(data) {
     console.log("Keys: ", keys);
     return keys;
 }
-let cleanedData = [];
-
 function dataCleaner(data) {
     for (let i = 0; i < data.length; i++) {
-        cleanedData.push({
-            /*data pushen van functie dataToLowerCase*/ });
+            cleanedData.push({
+                clean: lowercase[i]
+             });
     }
 }
 console.table(cleanedData);
