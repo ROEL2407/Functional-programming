@@ -3,11 +3,8 @@ function starters() {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
         .then(response => response.json())
         .then(data => getPokemonData(data))
-        .then(function (data) {
-            let results = data.results;
-            showAllNames(results);
-            dataArray(results);
-        })
+        .then(data => showAllNames(data))
+        .then(data => showAllNames(data))
 }
     
 function getPokemonData(data) {
@@ -28,9 +25,12 @@ function getPokemonData(data) {
     Promise.all(promises).then(results => {
         //for each pokemon in results push the pokemon to the array pokemons
         results.forEach(pokemon => {
-            pokemons.push(pokemon);
+            pokemons.push({
+                naam: pokemon.name,
+                stat: pokemon.stats
+            });
         });
-        console.log(pokemons);
+        console.table(pokemons);
     });
 }
     
@@ -48,16 +48,9 @@ function showAllNames(data) {
     for (let i = 0; i < data.length; i++) {
         // shows all items of API request to the console
         var names = (data[i].name);
-        return names;
+        console.table(names);
     }
 }
-
-// function showStats(data) {
-//     for (let i = 0; i < data.length; i++) {
-//         var stats = data[i].stats;
-//         console.log(stats);
-//     }
-// }
 
 function dataArray (data) {
     for (let i = 0; i < data.length; i++) {
