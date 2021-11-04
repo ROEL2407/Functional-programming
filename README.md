@@ -1,11 +1,11 @@
 # Functional-Programming
 
 ### Table of contents
-Assignment
+Assignment<br />
 [Where is this repository for?](https://github.com/ROEL2407/Functional-programming#where-is-this-repository-for)<br />
 [What's the goal of this repository?](https://github.com/ROEL2407/Functional-programming#whats-the-goal-of-this-repository)
 
-Project
+Project<br />
 [Installation](https://github.com/ROEL2407/Functional-programming#installation)<br />
 [Rubric](https://github.com/ROEL2407/Functional-programming#rubric)<br />
 [Resources](https://github.com/ROEL2407/Functional-programming#resources)<br />
