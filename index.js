@@ -8,7 +8,6 @@ fetch("./dataset_raw.json")
         renameKeys(data);
         dataToLowerCase(data);
         replaceBlanks(data);
-        showAllData(data);
         showKeys(data);
     })
     .catch(function (err) {
@@ -17,13 +16,6 @@ fetch("./dataset_raw.json")
     });
 
 let cleanedData = [];
-
-function showAllData(data) {
-    for (let i = 0; i < data.length; i++) {
-        // Loops all items of json file to the console 
-        //console.log(data);
-    }
-}
 
 function renameKey(obj, oldKey, newKey) {
     delete Object.assign(obj, {
