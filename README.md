@@ -9,6 +9,7 @@
 [Installation](https://github.com/ROEL2407/Functional-programming#installation)<br />
 [Rubric](https://github.com/ROEL2407/Functional-programming#rubric)<br />
 [Resources](https://github.com/ROEL2407/Functional-programming#resources)<br />
+[License](https://github.com/ROEL2407/Functional-programming#license)<br />
 
 ## Where is this repository for?
 This repository is for my lessons from tech track from the education Communication and Multimedia Design from the HvA. 
@@ -32,5 +33,5 @@ For this assignment I'm being rated on the folllowing points:
 * My fellow students who've helped me resolving some problems and learning me new types of tricks.
 * Stackoverflow for giving me the answer that I could tweak or that helped me understand my problem in the code better.  
 <hr />
-License
+## License
 Usage is provided under the [MIT License](https://github.com/ROEL2407/Functional-programming/blob/main/LICENSE). See LICENSE for the full details.
