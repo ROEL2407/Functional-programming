@@ -6,7 +6,9 @@
 [What's the goal of this repository?](https://github.com/ROEL2407/Functional-programming#whats-the-goal-of-this-repository)
 
 ### Project
-[Where is this repository for?](https://github.com/ROEL2407/Functional-programming#where-is-this-repository-for)<br />
+[Installation](https://github.com/ROEL2407/Functional-programming#installation)<br />
+[Rubric](https://github.com/ROEL2407/Functional-programming#rubric)<br />
+[Resources](https://github.com/ROEL2407/Functional-programming#resources)<br />
 
 ## Where is this repository for?
 This repository is for my lessons from tech track from the education Communication and Multimedia Design from the HvA. 
@@ -25,7 +27,7 @@ For this assignment I'm being rated on the folllowing points:
 
 ## Resources
 ### Credits
-* Our teachers at the Tech Track from CMD (specificly robert for coping with my questions).
+* Our teachers at the Tech Track from CMD (specificly robert for coping with my many questions).
 * My support group.
 * My fellow students who've helped me resolving some problems and learning me new types of tricks.
 * Stackoverflow for giving me the answer that I could tweak or that helped me understand my problem in the code better.  
