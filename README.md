@@ -24,7 +24,7 @@ git clone https://github.com/ROEL2407/Functional-programming.git
 ```
 ## Rubric
 For this assignment I'm being rated on the folllowing points:
-<img src="https://github.com/ROEL2407/Functional-programming/blob/main/wiki%20images/rubric.PNG">
+<img src="https://github.com/ROEL2407/Functional-programming/blob/main/wiki%20images/rubric.PNG?raw=true">
 
 ## Resources
 ### Credits
